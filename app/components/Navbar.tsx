@@ -62,7 +62,7 @@ export function Navbar() {
 
       <div className="flex items-center justify-end md:col-span-3 col-span-6">
         <Button className="hidden sm:block">Contact Me</Button>
-        <div>
+        <div className="sm:hidden">
           <SmallScreenMenu/>
         </div>
       </div>
