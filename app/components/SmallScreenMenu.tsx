@@ -5,12 +5,19 @@ import { navigationItems } from "./Navbar";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 
 export function SmallScreenMenu(){
+    const [isOpen,setIsOpen] = useState(false)
+
     const location = usePathname()
+    useEffect(()=>{
+        setIsOpen(false)
+
+    },[location])
     return (
-        <Sheet>
+        <Sheet open={isOpen} onOpenChange={(state)=> setIsOpen(state)}>
             <SheetTrigger asChild>
                 <Button variant="outline" size="icon">
                     <Menu className="h-4 w-4"/>
