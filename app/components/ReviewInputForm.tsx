@@ -1,10 +1,20 @@
+"use client"
 import { Input } from "@/components/ui/input";
 import SubmitButton from "./SubmitButton";
 import { postReview } from "../actions";
+import { useRef } from "react";
 
 export default function ReviewInputForm() {
+  const formRef = useRef<HTMLFormElement>(null);
   return (
-    <form action={postReview} className="flex flex-col justify-between gap-4 md:flex-row">
+    <form
+      ref={formRef}
+      action={async (formData) => {
+        await postReview(formData);
+        formRef.current?.reset();
+      }}
+      className="flex flex-col justify-between gap-4 md:flex-row"
+    >
       <Input
         type="text"
         name="review"
@@ -13,7 +23,7 @@ export default function ReviewInputForm() {
         placeholder="Your review here..."
         required
       />
-      <SubmitButton/>
+      <SubmitButton />
     </form>
   );
 }
