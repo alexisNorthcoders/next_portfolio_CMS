@@ -1,5 +1,6 @@
 import { Card,CardHeader } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import ReviewForm from "../components/ReviewForm";
 
 export default function ReviewPage(){
     return(
@@ -10,7 +11,8 @@ export default function ReviewPage(){
 
             <Card className="mt-10">
                 <CardHeader className="flex flex-col w-full">
-                    <Label>Review message</Label>
+                    <Label>Message</Label>
+                    <ReviewForm/>
                 </CardHeader>
             </Card>
         </section>
