@@ -1,9 +1,10 @@
 import { Input } from "@/components/ui/input";
 import SubmitButton from "./SubmitButton";
+import { postReview } from "../actions";
 
 export default function ReviewInputForm() {
   return (
-    <form className="flex flex-col justify-between gap-4 md:flex-row">
+    <form action={postReview} className="flex flex-col justify-between gap-4 md:flex-row">
       <Input
         type="text"
         name="review"
