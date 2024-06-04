@@ -2,6 +2,7 @@ import { Card, CardHeader } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import ReviewForm from "../components/ReviewForm";
 import prisma from "../lib/db";
+import { Suspense } from "react";
 
 async function getReviews() {
   const review = await prisma.reviews.findMany({
@@ -38,7 +39,10 @@ async function Reviews() {
               alt="User profile image"
               className="h-10 w-10 rounded-lg"
             />
-            <p className="text-muted-foreground pl-3 break-words">{review.User?.firstName}: <span className="text-foreground">{review.message}</span></p>
+            <p className="break-words pl-3 text-muted-foreground">
+              {review.User?.firstName}:{" "}
+              <span className="text-foreground">{review.message}</span>
+            </p>
           </div>
         </li>
       );
@@ -54,10 +58,13 @@ export default function ReviewPage() {
       <Card className="mt-10">
         <CardHeader className="flex w-full flex-col">
           <Label className="mb-1">Message</Label>
-
-          <ReviewForm />
+          <Suspense fallback={<p>this is loading</p>}>
+            <ReviewForm />
+          </Suspense>
           <ul className="flex flex-col gap-y-5 pt-7">
-            <Reviews />
+            <Suspense fallback={<p>this is loading</p>}>
+              <Reviews />
+            </Suspense>
           </ul>
         </CardHeader>
       </Card>
