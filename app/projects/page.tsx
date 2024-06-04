@@ -1,3 +1,14 @@
+async function getProjects(){
+  const query =`*[_type == "project"]{
+    title,
+      _id,
+      link,
+      description,
+          tags,
+      "imageUrl":image.asset -> url
+  }`
+}
+
 export default function Projects() {
   return <section className="mx-auto w-full max-w-7xl px-4 md:px-8">
     <h1 className="text-4xl font-semibold lg:text-5xl">Projects</h1>
