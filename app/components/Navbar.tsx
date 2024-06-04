@@ -13,10 +13,6 @@ import { SmallScreenMenu } from "./SmallScreenMenu";
 
 export const navigationItems = [
   {
-    name: "Home",
-    href: "/",
-  },
-  {
     name: "About me",
     href: "/about",
   },
@@ -28,30 +24,27 @@ export const navigationItems = [
     name: "Reviews",
     href: "/reviews",
   },
-  {
-    name: "Contact",
-    href: "/gallery",
-  },
 ];
 export function Navbar() {
-  const pathname = usePathname()
+  const pathname = usePathname();
   return (
-    <nav className="max-w-7xl mx-auto px-4 md:px-8 py-5 grid grid-cols-12">
-      <div className="col-span-6 flex md:col-span-3">
+    <nav className="mx-auto flex w-full max-w-7xl flex-row justify-between px-4 py-5 md:px-8">
+      <div className="flex">
         <Link href="/">
           <h1 className="text-3xl font-semibold">
-            <span className="text-yellow-500">Ling Ling </span>Clown
+            <span className="text-yellow-500">Max </span>Cloonie
           </h1>
         </Link>
       </div>
-      <div className="hidden sm:flex justify-center items-center col-span-6">
+      <div className="hidden sm:flex">
         <NavigationMenu>
           <NavigationMenuList>
             {navigationItems.map((item, index) => {
               return (
                 <NavigationMenuItem key={index}>
                   <Link href={item.href} legacyBehavior passHref>
-                    <NavigationMenuLink active={pathname === item.href}
+                    <NavigationMenuLink
+                      active={pathname === item.href}
                       className={navigationMenuTriggerStyle()}
                     >
                       {item.name}
@@ -64,10 +57,10 @@ export function Navbar() {
         </NavigationMenu>
       </div>
 
-      <div className="flex items-center justify-end md:col-span-3 col-span-6">
+      <div>
         <Button className="hidden sm:block">Contact Me</Button>
         <div className="sm:hidden">
-          <SmallScreenMenu/>
+          <SmallScreenMenu />
         </div>
       </div>
     </nav>
