@@ -32,7 +32,7 @@ export function Navbar() {
       <div className="flex">
         <Link href="/">
           <h1 className="text-3xl font-semibold">
-            Alexis<span className="text-yellow-500"> Creoulo</span>
+            Alexis<span className="text-primary"> Creoulo</span>
           </h1>
         </Link>
       </div>
