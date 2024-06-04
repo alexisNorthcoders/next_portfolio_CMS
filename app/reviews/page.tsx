@@ -3,6 +3,7 @@ import { Label } from "@/components/ui/label";
 import ReviewForm from "../components/ReviewForm";
 import prisma from "../lib/db";
 import { Suspense } from "react";
+import Loading from "../components/Loading";
 
 async function getReviews() {
   const review = await prisma.reviews.findMany({
@@ -62,7 +63,7 @@ export default function ReviewPage() {
             <ReviewForm />
           </Suspense>
           <ul className="flex flex-col gap-y-5 pt-7">
-            <Suspense fallback={<p>this is loading</p>}>
+            <Suspense fallback={<Loading/>}>
               <Reviews />
             </Suspense>
           </ul>
