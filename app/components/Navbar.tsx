@@ -21,8 +21,8 @@ import { ContactForm } from "./ContactForm";
 
 export const navigationItems = [
   {
-    name: "About me",
-    href: "/about",
+    name: "Home",
+    href: "/",
   },
   {
     name: "Projects",

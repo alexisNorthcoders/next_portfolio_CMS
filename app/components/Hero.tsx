@@ -1,5 +1,5 @@
 import { ContactForm } from "./ContactForm";
-import photo from "../../public/photopark.jpg";
+import photo from "../../public/herophoto.jpg";
 import {
   Dialog,
   DialogContent,
@@ -14,7 +14,7 @@ export function Hero() {
     <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
       <div className="col-span-1 h-full rounded-2xl bg-gray-100 p-8 md:col-span-2 ">
         <h1 className="text-4xl font-medium md:text-6xl">Hi! I'm Alexis </h1>
-        <h2 className="mb-3 mt-3 text-xl font-normal md:text-2xl text-justify">
+        <h2 className="mb-3 mt-3 text-xl font-normal md:text-3xl lg:text-6xl ">
           👋 I'm a software developer on a mission to create tech magic ✨. From crafting sleek interfaces to weaving complex algorithms, I'm here to turn your dreams into digital reality! 💻</h2>
         <Dialog>
           <DialogTrigger>
