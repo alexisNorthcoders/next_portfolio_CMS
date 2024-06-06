@@ -12,7 +12,7 @@ async function getProjects() {
           "imageUrl":image.asset -> url
       }`;
   try {
-    const projects = await client.fetch(query);
+    const projects = await client.fetch(query, {}, {next:{revalidate:30}});
     return projects;
   } catch (err) {
     console.log(err);
