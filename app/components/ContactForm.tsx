@@ -54,7 +54,10 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="py-2">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="rounded-lg bg-slate-100 p-3"
+      >
         <FormField
           control={form.control}
           name="firstName"
