@@ -40,7 +40,7 @@ export function Navbar() {
       <div className="flex">
         <Link href="/">
           <h1 className="text-3xl font-semibold">
-            John<span className="text-primary"> Random</span>
+            Alexis<span className="text-primary"> Creoulo</span>
           </h1>
         </Link>
       </div>
