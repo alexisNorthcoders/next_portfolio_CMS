@@ -58,7 +58,7 @@ export default async function Projects() {
                   {project.tags.map((tag, index) => {
                     return (
                       <span
-                        className="inline-flex items-center rounded-md bg-primary/10 px-1 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary sm:text-sm"
+                        className="inline-flex items-center rounded-md bg-primary/10 px-1 py-1 text-xs font-medium text-primary ring-2 ring-inset ring-primary/10 sm:text-sm"
                         key={index}
                       >
                         {tag}
