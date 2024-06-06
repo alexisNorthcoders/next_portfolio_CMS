@@ -179,7 +179,7 @@ export function MiddleSection() {
           </CardHeader>
           <CardContent className="flex flex-wrap gap-4">
             {skills.map((skill, index) => (
-              <div className="flex flex-col items-center justify-center">
+              <div key={`${skill.title}${index}`} className="flex flex-col items-center justify-center">
                 <Image
                   key={index}
                   src={skill.icon}
