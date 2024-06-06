@@ -30,5 +30,5 @@ export async function GET() {
     })
   }
 
-  return NextResponse.redirect("http://localhost:3000/reviews")
+  return NextResponse.redirect("https://next-portfolio-cms.vercel.app/reviews")
 }
