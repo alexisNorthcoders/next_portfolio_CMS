@@ -7,9 +7,17 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SmallScreenMenu } from "./SmallScreenMenu";
+import { ContactForm } from "./ContactForm";
 
 export const navigationItems = [
   {
@@ -58,7 +66,26 @@ export function Navbar() {
       </div>
 
       <div>
-        <Button className="hidden sm:block">Contact Me</Button>
+        <div className="hidden sm:block">
+          <Dialog>
+            <DialogTrigger>
+              <div className="group relative inline-block items-center justify-start overflow-hidden rounded-full bg-blue-600 px-5 py-3 font-medium transition-all hover:bg-white">
+                <span className="absolute inset-0 rounded-full border-0 border-white transition-all duration-100 ease-linear group-hover:border-[25px]"></span>
+                <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">
+                  Contact Me
+                </span>
+              </div>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Fill this form to send me a message!</DialogTitle>
+
+                <ContactForm />
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
+        </div>
+
         <div className="sm:hidden">
           <SmallScreenMenu />
         </div>
