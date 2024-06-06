@@ -32,13 +32,7 @@ const social = [
     icon: github,
     name: "GitHub",
     link: "https://github.com/alexisNorthcoders",
-  },
-  {
-    id: 3,
-    icon: twitter,
-    name: "X/Twitter",
-    link: "",
-  },
+  }
 ];
 export function MiddleSection() {
   return (
