@@ -8,18 +8,143 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import figma from "../../public/stack/figma.svg";
-import chatgpt from "../../public/stack/chatgpt.svg";
-import cloud from "../../public/stack/creativecloud.svg";
-import github from "../../public/stack/github.svg";
-import slack from "../../public/stack/slack.svg";
-import discord from "../../public/stack/discord.svg";
-import chrome from "../../public/stack/chrome.svg";
+import css from "../../public/skills/css-3.svg";
+import boot from "../../public/skills/bootstrap.svg";
+import express from "../../public/skills/express.svg";
+import firebase from "../../public/skills/firebase.svg";
+import html from "../../public/skills/html-5.svg";
+import javascript from "../../public/skills/javascript.svg";
+import jest from "../../public/skills/jest.svg";
+import mongodb from "../../public/skills/mongodb-icon.svg";
+import nodejs from "../../public/skills/nodejs.svg";
+import openai from "../../public/skills/openai-icon.svg";
+import psql from "../../public/skills/postgresql.svg";
+import python from "../../public/skills/python.svg";
+import react from "../../public/skills/react.svg";
+import tailwind from "../../public/skills/tailwindcss-icon.svg";
+import typescript from "../../public/skills/typescript-icon.svg";
+import agile from "../../public/skills/agile.svg";
+import tdd from "../../public/skills/tdd.png";
+import pairProgramming from "../../public/skills/pairprogramming.jpeg";
+import github from "../../public/skills/github-icon.svg";
 import linkedin from "../../public/linkedin.svg";
-import twitter from "../../public/twitter.svg";
+
 import { Button } from "@/components/ui/button";
 
-const icons = [figma, chatgpt, cloud, github, slack, discord, chrome];
+const skills = [
+  {
+    title: "CSS",
+    icon: css,
+    description: "Proficient in styling webpages using CSS.",
+  },
+  {
+    title: "JavaScript",
+    icon: javascript,
+    description:
+      "Extensive use of JavaScript for dynamic and interactive web development.",
+  },
+  {
+    title: "Node.js",
+    icon: nodejs,
+    description:
+      "Utilizing Node.js for server-side scripting and backend development.",
+  },
+  {
+    title: "Bootstrap",
+    icon: boot,
+    description:
+      "Utilizing Bootstrap components for responsive web development.",
+  },
+  {
+    title: "Express",
+    icon: express,
+    description: "Building RESTful APIs and web applications with Express.js.",
+  },
+  {
+    title: "Firebase",
+    icon: firebase,
+    description:
+      "Leveraging Firebase for authentication, real-time chat, databases, and cloud storage.",
+  },
+  {
+    title: "GitHub",
+    icon: github,
+    description: "Version control and collaboration using GitHub.",
+  },
+  {
+    title: "HTML",
+    icon: html,
+    description: "Proficient in creating structured webpages with HTML5.",
+  },
+
+  {
+    title: "Jest",
+    icon: jest,
+    description:
+      "Applying Test-Driven Development (TDD) methodology with Jest for robust testing.",
+  },
+  {
+    title: "MongoDB",
+    icon: mongodb,
+    description: "Expertise in using MongoDB for database management.",
+  },
+
+  {
+    title: "OpenAI",
+    icon: openai,
+    description:
+      "Experience with OpenAI API, particularly in prompt engineering.",
+  },
+  {
+    title: "PostgreSQL",
+    icon: psql,
+    description:
+      "Proficient in database management with PostgreSQL, including hosting, testing, and maintenance.",
+  },
+  {
+    title: "Python",
+    icon: python,
+    description:
+      "Utilizing Python for scripting, data analysis, and solving various problems.",
+  },
+  {
+    title: "React",
+    icon: react,
+    description:
+      "Extensive experience in building web and mobile applications using React.",
+  },
+  {
+    title: "Tailwind CSS",
+    icon: tailwind,
+    description:
+      "Applying Tailwind CSS for efficient and customizable styling of webpages.",
+  },
+  {
+    title: "TypeScript",
+    icon: typescript,
+    description:
+      "Implementing type safety and improved code maintainability with TypeScript.",
+  },
+  {
+    title: "Pair Programming",
+    icon: pairProgramming,
+    description:
+      "Proficient in collaborative programming techniques, working closely with team members to solve problems, share knowledge, and produce high-quality code.",
+  },
+  {
+    title: "Test-Driven Development (TDD)",
+    icon: tdd,
+    description:
+      "Skilled in Test-Driven Development (TDD) practices, writing tests before code to ensure code quality, maintainability, and functionality.",
+  },
+
+  {
+    title: "Agile Methodologies",
+    icon: agile,
+    description:
+      "Adaptable to Agile methodologies, including Scrum and Kanban, to facilitate iterative development, collaboration, and continuous improvement within cross-functional teams.",
+  },
+];
 const social = [
   {
     id: 1,
@@ -32,7 +157,7 @@ const social = [
     icon: github,
     name: "GitHub",
     link: "https://github.com/alexisNorthcoders",
-  }
+  },
 ];
 export function MiddleSection() {
   return (
@@ -53,13 +178,16 @@ export function MiddleSection() {
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-4">
-            {icons.map((item, index) => (
-              <Image
-                key={index}
-                src={item}
-                alt="Icon of the stack"
-                className="h-16 w-16"
-              />
+            {skills.map((skill, index) => (
+              <div className="flex flex-col items-center justify-center">
+                <Image
+                  key={index}
+                  src={skill.icon}
+                  alt={skill.description}
+                  className="h-16 w-16"
+                />
+                <p key={`${index}${skill.title}`}className="text-muted-foreground">{skill.title}</p>
+              </div>
             ))}
           </CardContent>
         </Card>
