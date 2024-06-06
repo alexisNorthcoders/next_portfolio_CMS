@@ -36,7 +36,7 @@ export const navigationItems = [
 export function Navbar() {
   const pathname = usePathname();
   return (
-    <nav className="mx-auto flex w-full max-w-7xl flex-row justify-between px-4 py-5 md:px-8">
+    <nav className="items-center mx-auto flex w-full max-w-7xl flex-row justify-between px-4 py-5 md:px-8">
       <div className="flex">
         <Link href="/">
           <h1 className="text-3xl font-semibold">

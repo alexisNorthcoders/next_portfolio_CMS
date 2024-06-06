@@ -13,7 +13,7 @@ async function getProjects() {
   }`;
   try {
     const data = await client.fetch(query);
-    console.log(data, "this is the fetched projects");
+
     return data;
   } catch (error) {
     console.log(error);
@@ -31,7 +31,6 @@ export default async function Projects() {
       </p>
       <div className="grid grid-cols-1 gap-4 py-12 sm:gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-12">
         {data.map((project) => {
-          console.log(project.description);
           return (
             <a
               key={project._id}
@@ -39,7 +38,7 @@ export default async function Projects() {
               className="group block"
               target="_blank"
             >
-              <div className="aspect-w-16 aspect-h-12 relative overflow-hidden rounded-2xl">
+              <div className="aspect-h-12 aspect-w-16 relative overflow-hidden rounded-2xl">
                 <Image
                   src={project.imageUrl}
                   alt="Project image"
