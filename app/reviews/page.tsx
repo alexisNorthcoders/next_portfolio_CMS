@@ -54,7 +54,7 @@ async function Reviews() {
 export default function ReviewPage() {
   return (
     <section className="mx-auto w-full max-w-7xl px-4 md:px-8">
-      <h1 className="pt-5 text-4xl font-semibold lg:text-5xl">Reviews</h1>
+      <h1 className="text-4xl font-semibold lg:text-5xl">Reviews</h1>
       <p className="mt-2 leading-7 text-muted-foreground">Leave a Review!</p>
       <Card className="mt-10">
         <CardHeader className="flex w-full flex-col">

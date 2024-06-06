@@ -47,7 +47,7 @@ export function MiddleSection() {
         <Image
           src={bg}
           alt="abstract image"
-          className="h-[400px] w-full rounded-2xl object-cover"
+          className="h-full w-full rounded-2xl object-cover"
         />
       </div>
       <div className="col-span-1 flex w-full flex-col gap-4 md:col-span-2">

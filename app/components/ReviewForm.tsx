@@ -15,7 +15,7 @@ export default async function ReviewForm() {
       <div className="flex flex-col justify-between gap-4 md:flex-row">
         <Input disabled type="text" placeholder="Leave your review..." />
         <RegisterLink>
-        <Button>Sign in to review</Button>
+        <Button className="w-full">Sign in to review</Button>
         </RegisterLink>
       </div>
     );
