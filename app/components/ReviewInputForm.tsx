@@ -25,7 +25,7 @@ export default function ReviewInputForm() {
       />
       <SubmitButton />
     </form>
-    <a href="https://next-portfolio-cms.vercel.app/api/auth/logout" className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group w-fit">
+    <a href="https://next-portfolio-cms.vercel.app/api/auth/logout" className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group w-fit h-fit">
     <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
     <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
     </span>
