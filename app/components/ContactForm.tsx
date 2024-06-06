@@ -54,7 +54,7 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="py-2">
         <FormField
           control={form.control}
           name="firstName"
@@ -139,7 +139,8 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <div className="flex flex-row">
+
+        <div className="mt-2 flex flex-row">
           <Button type="submit">{buttonText}</Button>
           {status && (
             <p
