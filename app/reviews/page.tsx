@@ -4,8 +4,9 @@ import ReviewForm from "../components/ReviewForm";
 import prisma from "../lib/db";
 import { Suspense } from "react";
 import { LoadingReviews, LoadingReviewForm } from "../components/Loading";
-
+import { unstable_noStore } from "next/cache";
 async function getReviews() {
+  unstable_noStore();
   const review = await prisma.reviews.findMany({
     select: {
       User: {
